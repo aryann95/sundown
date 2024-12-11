@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+    background-color:#efe9e3;
+
+}
+
+#page1{
+    height:100vh;
+    width:100%;
+    position: relative;
+    padding: 0 2vw ;
+}
+nav{
+    padding: 2vw 0vw;
+    height:100px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+#nav-2{
+    display:flex;
+    align-items:center;
+    gap:1vw ;
+
+}
+#nav-2 h4{
+    padding:10px 20px;
+    border: 1px solid #777777;
+    border-radius: 50px;
+    font-weight: 500;
+    color: black;
+    position:relative;
+        transition: all ease 0.3s;
+    font-size: 15px;
+    overflow: hidden;
+}
+#nav-2 h4::after{
+    content:"";
+    height:100%;
+    width:100%;
+    position:absolute;
+    background-color:black;
+    left:0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+
+}
+#nav-2 h4:hover::after{
+    bottom: 0;
+    border-radius:0;
+}
+
+#nav-2 h4 a{
+    text-decoration: none;
+    color:black;
+    position: relative;
+    z-index: 9;
+
+}
+#nav-2 h4:hover a{
+    color:white;
+}
+
+#center{
+height:65vh;
+width: 100%;
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+border-bottom: 1px solid #777777;
+padding-bottom: 2vw;
+}
+
+#left h3{
+    font-size: 2vw;
+    width: 25vw;
+    line-height: 2vw;
+}
+#center h1{
+font-size: 12vw;
+line-height: 9vw;
+text-align: right;
+}
+
+video{
+    height: 55vw;
+    width: 100%;
+    padding-bottom: 3vw;
+}
+
+#page-2{
+      min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+    position: relative;
+
+}
+
+#moving-text{
+    overflow-x:auto ;
+    white-space: nowrap;
+
+}
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1{
+    padding-top: 4vw;
+    display: inline-block;
+    font-size: 120px;
+}
+
+#gola{
+    background-color:161D6F ;
+    border-radius: 50%;
+    height: 60px;
+    width:60px;
+    display: inline-block;
+    margin: 0vw 1vw;
+}
+
+@keyframes move{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 80vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+    padding: 4.5vw;
+}
+
+#page2-bottom h1{
+    font-size: 5vw;
+    width: 60%;
+    line-height:5vw ;
+}
+
+#bottom-p2{
+    width: 20%;
+}
+
+#bottom-p2 img{
+    width: 100%;
+    border-radius: 1vw;
+}
+
+#bottom-p2 p{
+    font-size: 1vw;
+    font-weight: 200;
+    margin-top: 2vw;
+}
+
+#goeey{
+    position: absolute;
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    background:linear-gradient(to top,rgb(45, 22, 215),#9236dd);
+    top: 70%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: goeey;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes goeey{
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+
+#page3{
+  min-height: 100vh;
+  width: 100%;
+  padding: 4vw 0;
+  background-color: efe9e3;
+}
+.elem{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid rgb(181, 176, 176);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 3vw;
+    z-index: 9;
+}
+
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: 496989;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.5s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+
+#fixed-image{
+    height: 40vh;
+    width: 35vh;
+    background-color: #ec8728;
+    border-radius: 2vh;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size:cover;
+    background-position: center;
+
+}
+#page4{
+height: 40vw;
+width: 100%;
+background-color: #efe9e3;
+}
+
+#page5{
+    height: 40vw;
+    width: 100%;
+    background-color: #000000;
+    }
